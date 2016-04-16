@@ -27,7 +27,7 @@ void Fire::Update()
 	case true: props->y -= 2; break;
 	default: props->x = (player->props->x + (player->props->w/2)-1); break;
 	}
-	switch(props->y <= 0){
+	switch(bool(props->y <= 0)){
 	case true: cState = DEAD; break;
 	default: break;
 	}
